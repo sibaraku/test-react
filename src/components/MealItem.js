@@ -8,6 +8,11 @@ const MealItem = (props) => {
 
     const {AddItem} = useContext(CartContext);
 
+    const HandleAddToCart = () => {
+        const newItem = props.meal
+        AddItem(newItem)
+    }
+
     return (
         <li className="meal-item">
             <article className="meal-item article">
@@ -18,7 +23,7 @@ const MealItem = (props) => {
                     <p className="meal-item-description">{props.meal.description}</p>
                 </div>
                     <p className="meal-item-actions">
-                        <Button onClick={() => AddItem(props.meal)}>Add to Cart</Button>
+                        <Button onClick={HandleAddToCart}>Add to Cart</Button>
                     </p>
             </article>
         </li>

@@ -15,8 +15,7 @@ const Meals = () => {
     }, []);
     return (
         <ul id="meals">
-            {data.map((meal) => (<MealItem key={meal.id} meal={meal}/>))
-            }
+            {data.map((meal) => (<MealItem key={meal.id} meal={meal}/>))}
         </ul>
     )
 }
